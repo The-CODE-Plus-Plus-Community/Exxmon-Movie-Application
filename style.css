@@ -24,8 +24,6 @@ body{
     color: whitesmoke;
     border-right: 1px solid #80808033;
     width: 20vw;
-    /* padding-bottom: 20px; */
-    /* margin-bottom: 20px; */
 }
 .nav .title{
     display: flex;
@@ -122,8 +120,10 @@ body{
 }
 .content .genres ul a{
     color: #808080;
-    /* list-style: none; */
     text-decoration: none;
+}
+.content .genres ul a:hover{
+    color: #fff;
 }
 .content .main-card{
     height: 40vh;
@@ -140,9 +140,8 @@ body{
     flex-direction: column;
     height: 20vh;
     margin-top: 20vh;
-    padding: 5vh 5vh 0 5vh;
+    padding: 5vh;
     font-size: 0.8rem;
-    /* margin: 0 10vh; */
 }
 .content .main-card .card-content div{
     margin-top: 5px;
@@ -156,13 +155,13 @@ body{
 .content .main-card .card-content div :nth-child(2){
     /* margin-top: 30px; */
     margin-left: 5px;
-    padding: 6px 15px;
+    padding: 6px 15px 10px 15px;
     background-color: rgba(128, 128, 128, 0.541);
     font-size: 1.3rem;
     color: honeydew;
-    border-radius: 15px;
+    border-radius: 10px;
 }
-.content .secondary-cards .top{
+.content .secondary-cards .top, .content .watching .top{
     display: flex;
     width: 88%;
     margin-left: 6%;
@@ -175,24 +174,29 @@ body{
     width: 10%;
     justify-content: space-evenly;
 }
+.content .watching .top .icons{
+    font-size: 1.6em;
+    color: grey;
+    display: flex;
+    width: 10%;
+    justify-content: space-evenly;
+}
 .content .secondary-cards .cards{
     display: flex;
-    width: 88%;
-    margin-left: 6%;
+    width: 90%;
+    margin-left: 5%;
     justify-content: space-evenly;
 }
 .content .secondary-cards .cards #cards{
     display: flex;
     flex-direction: column;
-    height: 30vh;
-    width: 23%;
-    background-color: hotpink;
-    margin-top: 30px;
+    height: 25vh;
+    width: 20%;
+    margin-top: 10px;
     border-radius: 10px;
     align-items: center;
     padding-top: 20vh;
-    /* background-image: url('charlize.jpg');
-    background-size: cover; */
+    font-size: 0.8rem;
 }
 .content .secondary-cards .cards .card1{
     background-image: url('charlize.jpg');
@@ -209,4 +213,175 @@ body{
 .content .secondary-cards .cards .card4{
     background-image: url('laurence\ fishburne.jpg');
     background-size: cover;
+}
+.content .secondary-cards .cards #cards {
+    padding: 14vh 2vh 2vh 2vh;
+}
+.content .secondary-cards .cards #cards .stars{
+    color: goldenrod;
+}
+.content .watching .box{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 96%;
+    margin-left: 2%;
+    font-size: 0.8rem;
+}
+.content .watching .box #box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12vh;
+    width: 25%;
+    height: 15vh;
+    border-radius: 12px;
+}
+.content .watching .box #box p{
+    display: inline-block;
+    background-size: inherit;
+}
+.content .watching .box .box1{
+    background: url('the-matrix-revolutions-1200x781.jpg');
+    background-size: cover;
+}
+.content .watching .box .box2{
+    background: url('949179-deadpool.jpg');
+    background-size: cover;
+}
+.content .watching .box .box3{
+    background: url('images.jpg');
+    background-size: cover;
+}
+.content .watching .box .box1::before{
+    content: '';
+    width: 70px;
+    height: 2px;
+    position: relative;
+    top: 100%;
+    /* bottom: 0; */
+    left: -75px;
+    background-color: red;
+}
+.content .watching .box .box2::before{
+    content: '';
+    width: 140px;
+    height: 2px;
+    position: relative;
+    top: 98%;
+    /* bottom: 0; */
+    left: -40px;
+    background-color: red;
+}
+.content .watching .box .box3::before{
+    content: '';
+    width: 95%;
+    height: 2px;
+    position: relative;
+    top: 98%;
+    /* bottom: 0; */
+    left: 0px;
+    background-color: red;
+}
+.overview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20vw;
+    height: 100vh;
+    color: rgb(207, 204, 204);
+}
+.overview .search-bar input{
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 1px solid #808080;
+    background: #181a1d;
+    /* border: none; */
+    outline: none;
+    color: #fff;
+}
+.overview .popular, .overview .fav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 42vh;
+}
+.overview .head{
+    font-weight: 800;
+}
+.overview .movies{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 30vh;
+    font-size: 0.7rem;
+}
+.overview .popular .movies .card{
+    display: flex;
+    width: 10vw;
+    justify-content: space-evenly;
+    height: 30%;
+    /* margin-left: ; */
+}
+.overview .fav .movies .card{
+    display: flex;
+    width: 12vw;
+    justify-content: space-evenly;
+    height: 30%;
+}
+.overview .movies .card .image{
+    height: 100%;
+    width: 30%;
+    background-size: cover;
+    border-radius: 10px;
+}
+.overview .movies .card i{
+    font-size: 25px;
+    color: yellow;
+}
+.overview .popular .movies .card .cont{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.overview .popular .movies .card .cont span{
+    font-size: 0.5rem;
+}
+.overview .popular .movies .card .image1{
+    background: url('John-wick.jpg');
+    background-size: cover;
+}
+.overview .popular .movies .card .image2{
+    background: url('mad-max.jpg');
+    background-size: cover;
+}
+.overview .popular .movies .card .image3{
+    background:url('ip-man2.jpg');
+    background-size: cover;
+}
+.overview .fav .movies .card .image4{
+    background:url('hobbit.jpg');
+    background-size: cover;
+}
+.overview .fav .movies .card .image5{
+    background:url('legend.jpg');
+    background-size: cover;
+}
+.overview .fav .movies .card .image6{
+    background:url('Avatar.jpg');
+    background-size: cover;
+}
+.overview button{
+    width: 12vw;
+    height: 35px;
+    background-color: rgba(253, 39, 39, 0.89);
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+}
+.overview button:hover{
+    cursor: pointer;
+    background-color: rgba(253, 39, 39, 0.616);
 }
